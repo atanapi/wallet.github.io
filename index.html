@@ -431,21 +431,22 @@
 			var walletTimer = false
 			var walletVersion = '1.0.0'
 			var networkConfigs = {
-				"atanapi": {
-					"name": "Main Network (NAPI)",
-					"api": "https://api.atanapi.org",
-					"ticker": "NAPI",
-					"decimals": 8,
-					"fee": 0.01,
-					"params": {
-						"satoshis": 10000,
-						"decimals": 8,
-						"pub": 0x23,
-						"multisig": 0x53,
-						"priv": 0x54
+				'atanapi': {
+					'uri': 'atanapi:',
+					'title': 'Atanapi Wallet',
+					'name': 'Atanapi Main Network (NAPI)',
+					'api': 'https://api.atanapi.org',
+					'ticker': 'NAPI',
+					'decimals': 8,
+					'fee': 0.001,
+					'network': {
+						'messagePrefix': '\x19Bitcoin Signed Message:\n',
+						'bip32': {
+							'public': 0x03761378,
+							'private': 0x037613fd
+						}
 					}
-				}			
-				
+				}
 			}
 
 			// Explorer links
